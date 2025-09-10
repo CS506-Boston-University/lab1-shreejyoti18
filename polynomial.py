@@ -8,7 +8,6 @@ class X:
     def evaluate(self, x_value):
         return Int(x_value)
 
-
     def simplify(self):
         # TODO (Optional Exercise): Implement simplification
         # X cannot be simplified further, so return self
@@ -23,7 +22,7 @@ class Int:
         return str(self.i)
 
     def evaluate(self, x_value):
-         return self 
+        return self
 
     def simplify(self):
         # TODO (Optional Exercise): Implement simplification
@@ -88,15 +87,13 @@ class Sub:
         return repr(self.p1) + " - " + repr(self.p2)
 
     def evaluate(self, x_value):
-         # Call evaluate on operands (will still be unimplemented for X, Int, etc. in Ex.1)
+        # Call evaluate on operands (will still be unimplemented for X, Int, etc. in Ex.1)
         v1 = self.p1.evaluate(x_value).i
         v2 = self.p2.evaluate(x_value).i
         return Int(v1 - v2)
 
-
     def simplify(self):
         pass
-
 
 
 class Div:
@@ -119,7 +116,6 @@ class Div:
         if v2 == 0:
             raise ZeroDivisionError("Division by zero in evaluate()")
         return Int(v1 // v2)
-
 
     def simplify(self):
         pass
